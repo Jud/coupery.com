@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>coupery — wordmark candidates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&family=Instrument+Sans:wght@400..700&family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000;
+    --white: #F4F4F4;
+    --bright: #FFF;
+    --gray: #8A8A8A;
+    --dim: #555;
+    --hairline: #222;
+    --mono: "Geist Mono", ui-monospace, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--bright); color: var(--black); }
+  .page { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+  .manhead {
+    display: flex; justify-content: space-between;
+    color: var(--dim); font-size: 12px;
+    padding: 20px 0; border-bottom: 1px solid var(--hairline);
+  }
+  .intro { padding: 56px 0 8px; color: var(--gray); max-width: 58ch; }
+
+  .cand { padding: 72px 0; border-bottom: 1px solid var(--hairline); }
+  .cand:last-of-type { border-bottom: none; }
+  .cand .tag {
+    font-size: 12px; letter-spacing: 0.22em; color: var(--dim);
+    margin-bottom: 44px;
+  }
+  .cand .tag b { color: var(--white); font-weight: 500; }
+  .cand .note { color: var(--gray); margin-top: 40px; max-width: 56ch; font-size: 13px; }
+  .cand .sub { margin-top: 18px; font-size: 12px; color: var(--dim); letter-spacing: 0.24em; }
+
+  /* A — block heir: heavy lowercase grotesk, tight */
+  .wm-a {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: clamp(56px, 11vw, 112px);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    color: var(--bright);
+  }
+
+  /* B — the firm: caps, medium, tight */
+  .wm-b {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--bright);
+  }
+
+  /* C — the stamp: mono caps, wide tracked, small */
+  .wm-c {
+    font-family: "Geist Mono", monospace;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 500;
+    letter-spacing: 0.52em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--bright);
+  }
+
+  /* D — the compressed slab: archivo condensed caps, massive */
+  .wm-d {
+    font-family: "Archivo", sans-serif;
+    font-stretch: 66%;
+    font-size: clamp(64px, 13vw, 132px);
+    font-weight: 640;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    line-height: 0.94;
+    color: var(--bright);
+  }
+
+  .manfoot {
+    display: flex; justify-content: space-between;
+    color: var(--dim); font-size: 12px;
+    padding: 20px 0 56px; border-top: 1px solid var(--hairline);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="manhead"><span>COUPERY(1)</span><span>wordmark — candidates</span></div>
+
+  <p class="intro">four treatments. all black, all type, no marks, no devices. the identity is the setting itself.</p>
+
+  <div class="cand">
+    <div class="tag"><b>a</b> — hanken grotesk 700, lowercase, tight</div>
+    <div class="wm-a">coupery</div>
+    <p class="note">the block heir. heavy, warm-edged grotesk set tight — confident without raising its voice. lowercase reads as a name you already know.</p>
+  </div>
+
+  <div class="cand">
+    <div class="tag"><b>b</b> — instrument sans 600, caps, near-solid</div>
+    <div class="wm-b">Coupery</div>
+    <p class="note">the firm. capitals at conversational tracking — engineering-practice severity, closer to a masthead than a logo. ages the slowest of the four.</p>
+  </div>
+
+  <div class="cand">
+    <div class="tag"><b>c</b> — geist mono 500, caps, wide-tracked</div>
+    <div class="wm-c">Coupery</div>
+    <div class="sub">CRYPTOGRAPHY&nbsp;CORPORATION</div>
+    <p class="note">the stamp. small, spaced, official — classified-document energy. never big; authority through restraint. keeps the whole system in one typeface.</p>
+  </div>
+
+  <div class="cand">
+    <div class="tag"><b>d</b> — archivo condensed 640, caps, massive</div>
+    <div class="wm-d">Coupery</div>
+    <p class="note">the monolith. condensed capitals at poster scale — a black slab of a name. the loudest option while still being only type.</p>
+  </div>
+
+  <div class="manfoot"><span>coupery.com</span><span>pick one, or point at what's wrong</span></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>coupery — cryptography corporation</title>
+<meta name="description" content="everything is being read. cryptography decides what can be. coupery accelerates cryptography.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-weight='600' font-size='36' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300..500&family=Instrument+Sans:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --white: #F4F4F4;
+    --bright: #FFFFFF;
+    --gray: #8A8A8A;
+    --dim: #757575;
+    --hairline: #222222;
+    --mono: "Geist Mono", ui-monospace, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  ::selection { background: var(--bright); color: var(--black); }
+  a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--dim); }
+  a:hover { text-decoration-color: var(--white); }
+  a:focus-visible { outline: 1px solid var(--white); outline-offset: 3px; text-decoration: none; }
+
+  .page { width: 100%; max-width: 720px; margin: 0 auto; padding: 0 24px; flex: 1; display: flex; flex-direction: column; }
+
+  header {
+    display: flex; justify-content: space-between;
+    color: var(--dim); font-size: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  header span:nth-child(2) { display: none; }
+  @media (min-width: 560px) { header span:nth-child(2) { display: inline; } }
+
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 96px 0; }
+  h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(44px, 9vw, 84px);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    color: var(--bright);
+    text-transform: uppercase;
+  }
+  .corp { color: var(--gray); margin-top: 20px; }
+
+  .stanza { margin-top: 88px; color: var(--bright); }
+  .stanza p { line-height: 2; }
+
+  .thesis { margin-top: 56px; color: var(--gray); max-width: 56ch; }
+
+  .contact { margin-top: 88px; }
+
+  footer {
+    display: flex; justify-content: space-between;
+    color: var(--dim); font-size: 12px;
+    padding: 20px 0 32px;
+    border-top: 1px solid var(--hairline);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <span>COUPERY(1)</span>
+    <span>cryptography corporation</span>
+    <span>COUPERY(1)</span>
+  </header>
+
+  <main>
+    <h1>Coupery</h1>
+    <p class="corp">cryptography corporation</p>
+
+    <div class="stanza">
+      <p>everything is being read.</p>
+      <p>cryptography decides what can be.</p>
+      <p>coupery accelerates cryptography.</p>
+    </div>
+
+    <p class="thesis">ai strips privacy at scale and compounds cryptography at the same rate. coupery works the second edge: products that are private, secure, and usable.</p>
+
+    <p class="contact"><a href="mailto:hello@coupery.com">hello@coupery.com</a></p>
+  </main>
+
+  <footer>
+    <span>coupery.com</span>
+    <span>© 2026 coupery cryptography corporation</span>
+  </footer>
+
+</div>
+</body>
+</html>

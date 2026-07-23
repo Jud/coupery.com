@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>coupery — brand, rev b</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300..600&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --white: #F4F4F4;
+    --bright: #FFFFFF;
+    --gray: #8A8A8A;
+    --dim: #757575;
+    --hairline: #222222;
+    --red: #E5484D;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--white); color: var(--black); }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .manhead, .manfoot {
+    display: flex; justify-content: space-between;
+    color: var(--dim); font-size: 12px;
+    padding: 20px 0;
+  }
+  .manhead { border-bottom: 1px solid var(--hairline); }
+  .manfoot { border-top: 1px solid var(--hairline); margin-top: 96px; padding-bottom: 56px; }
+  .manhead span:nth-child(2), .manfoot span:nth-child(2) { display: none; }
+  @media (min-width: 600px) {
+    .manhead span:nth-child(2), .manfoot span:nth-child(2) { display: inline; }
+  }
+
+  .hero { padding: 128px 0 120px; }
+  .hero h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(48px, 10vw, 96px);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--bright);
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+  }
+  .hero .sub { color: var(--gray); margin-top: 28px; }
+  .hero .sub .dim { color: var(--dim); }
+
+  section { padding: 56px 0; border-top: 1px solid var(--hairline); }
+  h2 {
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.22em;
+    color: var(--dim);
+    margin-bottom: 32px;
+  }
+  .indent { padding-left: 0; }
+  @media (min-width: 600px) { .indent { padding-left: 56px; } }
+
+  .name-line { color: var(--bright); }
+  .name-line b { font-weight: 500; }
+  .gray { color: var(--gray); }
+  .dim2 { color: var(--dim); }
+  p + p { margin-top: 1.2em; }
+  .maxw { max-width: 58ch; }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 1px; background: transparent; }
+  .sw { width: 112px; }
+  .sw .block { height: 112px; border: 1px solid var(--hairline); }
+  .sw .label { font-size: 12px; color: var(--gray); margin-top: 10px; line-height: 1.5; }
+  .sw .label b { display: block; color: var(--white); font-weight: 400; }
+  .sw .label .r { color: var(--red); }
+  .color-note { margin-top: 36px; }
+
+  .weights { border-left: 1px solid var(--hairline); padding-left: 24px; }
+  .weights div { line-height: 2.2; }
+  .w300 { font-weight: 300; }
+  .w400 { font-weight: 400; }
+  .w500 { font-weight: 500; }
+  .w600 { font-weight: 600; }
+  .scale { margin-top: 40px; color: var(--bright); }
+  .scale .s1 { font-size: 32px; font-weight: 500; line-height: 1.3; }
+  .scale .s2 { font-size: 20px; font-weight: 400; margin-top: 8px; line-height: 1.4; }
+  .scale .s3 { font-size: 14px; color: var(--gray); margin-top: 8px; }
+  .scale .s4 { font-size: 12px; color: var(--dim); margin-top: 8px; }
+
+  ul { list-style: none; }
+  ul.rules li { color: var(--gray); padding-left: 22px; position: relative; }
+  ul.rules li + li { margin-top: 10px; }
+  ul.rules li::before { content: "·"; position: absolute; left: 4px; color: var(--dim); }
+
+  .usage { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 700px) { .usage { grid-template-columns: 1fr 1fr; } }
+  .term {
+    border: 1px solid var(--hairline);
+    padding: 24px;
+    font-size: 13px;
+    line-height: 2;
+    overflow-x: auto;
+  }
+  .term .p { color: var(--dim); user-select: none; }
+  .term .out { color: var(--gray); }
+  .paper {
+    background: var(--bright);
+    color: var(--black);
+    padding: 24px;
+    font-size: 13px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 180px;
+  }
+  .paper .head { display: flex; justify-content: space-between; color: #666; font-size: 12px; }
+  .paper .title { font-weight: 500; font-size: 16px; line-height: 1.4; max-width: 24ch; }
+  .paper .foot { font-size: 11px; letter-spacing: 0.18em; color: #767676; }
+  .use-cap { grid-column: 1 / -1; color: var(--dim); font-size: 12px; }
+
+  .voice-line { color: var(--bright); font-size: 20px; font-weight: 400; max-width: 34ch; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="manhead">
+    <span>COUPERY(1)</span>
+    <span>cryptography corporation</span>
+    <span>COUPERY(1)</span>
+  </header>
+
+  <main>
+  <div class="hero">
+    <h1>Coupery</h1>
+    <p class="sub">cryptography corporation <span class="dim">/ est. 2026</span></p>
+  </div>
+
+  <section>
+    <h2>NAME</h2>
+    <div class="indent">
+      <p class="name-line"><b>coupery</b> — a cryptography corporation</p>
+      <p class="gray maxw">the wordmark is set in capitals; in running text the name is written plainly, like any other word, with no camel case and no styling mid-sentence.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>COLOR</h2>
+    <div class="indent">
+      <div class="swatches">
+        <div class="sw"><div class="block" style="background:#000000"></div>
+          <div class="label"><b>#000000</b>the material.</div></div>
+        <div class="sw"><div class="block" style="background:#FFFFFF; border:none"></div>
+          <div class="label"><b>#FFFFFF</b>text on screen, paper in print.</div></div>
+        <div class="sw"><div class="block" style="background:#8A8A8A; border:none"></div>
+          <div class="label"><b>#8A8A8A</b>secondary text.</div></div>
+        <div class="sw"><div class="block" style="background:#222222"></div>
+          <div class="label"><b>#222222</b>hairlines.</div></div>
+        <div class="sw"><div class="block" style="background:#E5484D; border:none"></div>
+          <div class="label"><b class="r">#E5484D</b>reserved for revocation.</div></div>
+      </div>
+      <p class="gray maxw color-note">black and white carry everything. red marks revocation, compromise, and critical states, and it is used rarely so that it stays unmistakable.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>TYPE</h2>
+    <div class="indent">
+      <p class="name-line"><b>instrument sans 600, in capitals,</b> <span class="gray">sets the wordmark and nothing else.</span></p>
+      <p class="name-line" style="margin-top:16px"><b>geist mono</b> <span class="gray">sets everything that isn't the wordmark.</span></p>
+      <div class="weights" style="margin-top:28px">
+        <div class="w300">300 — display, large sizes only</div>
+        <div class="w400">400 — text</div>
+        <div class="w500">500 — headings, emphasis</div>
+        <div class="w600">600 — never used. if a line needs 600, rewrite the line.</div>
+      </div>
+      <div class="scale">
+        <div class="s1">everything is being read. cryptography decides what can be.</div>
+        <div class="s2">coupery builds products that are private, secure, and usable.</div>
+        <div class="s3">secondary: context, captions, metadata.</div>
+        <div class="s4">footnotes and man-page furniture.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>MARK</h2>
+    <div class="indent">
+      <p class="name-line"><b>there is no mark.</b></p>
+      <p class="gray maxw" style="margin-top:16px">sudo has no logo. the name, set correctly, is the identity. where software forces a square (favicon, avatar), it is a black square bearing the wordmark's C. that is an accommodation.</p>
+      <ul class="rules" style="margin-top:28px">
+        <li>the wordmark is the word, with no lockups and no symbols beside it.</li>
+        <li>nothing is drawn: no icons, no glyphs, no devices.</li>
+        <li>slides carry no logos; the filename is the branding.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>USAGE</h2>
+    <div class="indent usage">
+      <div class="term">
+        <div><span class="p" aria-hidden="true">$</span> coupery verify ./release.tgz</div>
+        <div class="out">ok — signature valid</div>
+        <div><span class="p" aria-hidden="true">$</span> _</div>
+      </div>
+      <div class="paper">
+        <div class="head"><span>ccc-2026-001</span><span>technical note</span></div>
+        <div class="title">private by construction: what ai changes about building secure products</div>
+        <div class="foot">COUPERY CRYPTOGRAPHY CORPORATION</div>
+      </div>
+      <div class="use-cap">screens are black and printed things are white; there is no third mode.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>VOICE</h2>
+    <div class="indent">
+      <p class="voice-line">everything is being read.<br>cryptography decides what can be.<br>coupery accelerates cryptography.</p>
+      <p class="gray maxw" style="margin-top:32px">the thesis: ai strips privacy at scale and compounds cryptography at the same rate. the machines reading everything can also secure it. coupery works the second edge: products that are private, secure, and usable.</p>
+      <ul class="rules" style="margin-top:32px">
+        <li>write complete, declarative sentences in lowercase with full stops.</li>
+        <li>avoid exclamation points and adjectives you can't prove.</li>
+        <li>claims are provable or they aren't made.</li>
+        <li>primitives live in specs and code, never in marketing.</li>
+      </ul>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="manfoot">
+    <span>coupery.com</span>
+    <span>2026-07-23</span>
+    <span>COUPERY(1)</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
