@@ -47,7 +47,7 @@ second edge: products that are private, secure, and usable.
 - **instrument sans 600, in capitals,** sets the wordmark and nothing
   else. tracking is -0.015em.
 - the wordmark carries a faint white glow, and nothing else does:
-  `text-shadow: 0 0 12px rgba(255,255,255,.20), 0 0 56px rgba(255,255,255,.08)`.
+  `text-shadow: 0 0 16px rgba(255,255,255,.25), 0 0 64px rgba(255,255,255,.11)`.
   it reads as halation, never as neon; if it is visible before the
   letterforms are, it is too strong.
 - **geist mono** sets everything that isn't the wordmark.
