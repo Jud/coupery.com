@@ -80,6 +80,17 @@ sudo has no logo. the name, set correctly, is the identity.
 - errors state what happened and what to do. nothing hypes, nothing
   apologizes.
 
+## source
+
+- the html source opens with an ascii-art comment, placed at the top of
+  the file before the html element. it carries the wordmark in block
+  characters, the corporation line, the stanza, the contact address, and
+  the modem sign-off (`+++ATH0` / `NO CARRIER`). nothing else.
+- the comment uses box-drawing characters only; html comments cannot
+  contain a double hyphen.
+- the comment speaks in the page's voice. it does not address the
+  reader, joke about being found, or recruit.
+
 ## documents
 
 - reports and notes are numbered `ccc-YYYY-NNN`.
@@ -106,3 +117,5 @@ these were tried or considered and killed. they stay dead:
   else, ever."). the voice writes complete sentences.
 - unprovable superlatives ("the strongest tools ever"), aphoristic
   kickers ("scarcity is what makes it loud"), and em dashes as rhythm.
+- self-referential winks at the reader ("you read the source. so do
+  we."), in source comments or anywhere else.
