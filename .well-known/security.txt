@@ -1,0 +1,4 @@
+Contact: mailto:hello@coupery.com
+Expires: 2027-07-01T00:00:00.000Z
+Canonical: https://coupery.com/.well-known/security.txt
+Preferred-Languages: en
